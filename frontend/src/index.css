@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-100 font-sans selection:bg-sky-500 selection:text-white;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Glassmorphism utility card styles */
+.glass-panel {
+  @apply bg-slate-900/80 backdrop-blur-md border border-slate-800 rounded-xl shadow-xl;
+}
+.glass-card {
+  @apply bg-slate-800/60 backdrop-blur-sm border border-slate-700/50 rounded-xl hover:border-sky-500/50 transition-all duration-200;
+}
+
+/* Leaflet popup styling fixes */
+.leaflet-popup-content-wrapper {
+  background-color: #0f172a !important;
+  color: #f8fafc !important;
+  border: 1px solid #334155 !important;
+  border-radius: 0.75rem !important;
+}
+.leaflet-popup-tip {
+  background-color: #0f172a !important;
+}
